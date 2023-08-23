@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+void num(int i)
+{
+	if(i>10)
+	{
+		return;
+	}
+	cout<<i<<endl;
+	num(i+1);
+}
+int main()
+{
+	num(1);
+}
