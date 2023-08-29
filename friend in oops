@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+class HumanBeing{
+private:
+	string name;
+	int age;
+public:
+	HumanBeing(string word,int val)
+	{
+		name=word;
+		age=val;
+	}
+	friend void Display(HumanBeing kok); //friend method
+};
+void Display(HumanBeing kok){
+	cout<<kok.name<<" "<<kok.age<<endl;
+}
+int main(){
+	HumanBeing kok("srishanth",56);
+	Display(kok);
+}
