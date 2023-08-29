@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+class HumanBeing{
+private:
+	string name;
+	int age;
+public:
+	void SetData(int val, string word) //method with parameters
+	{
+		age=val; // using private members
+		name=word;
+	}
+	void GetData()
+	{
+		cout<<"I am "<<name<<" of age "<<age<<endl;
+	}
+};
+
+int main(){
+	HumanBeing h1;
+	h1.SetData(12,"Harsha");
+	h1.GetData();
+}
