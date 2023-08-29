@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+class HumanBeing{
+public:
+	string name;
+	void Intro(){           //class methods
+		cout<<"I am "<<name<<endl;
+	}
+	void dis();
+};
+void HumanBeing :: dis(){
+	cout<<"hello "<<HumanBeing::name<<endl; //we declare only when they are in public
+}
+int main(){
+	HumanBeing mem1; // Declaring a object normally
+	mem1.name="Dhanunjay";
+	mem1.Intro();
+	mem1.dis(); // method declared outside the class
+	HumanBeing *mem2= new HumanBeing(); //Declaring object using pointer as refernce
+	mem2->name="Sunil"; //should not use dot
+	mem2->Intro();
+	HumanBeing *mem3=&mem1; //giving another object as refernce
+	mem3->Intro(); // (*mem3).name we can write in this way also
+	return 0;
+}
