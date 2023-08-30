@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Human{
+public:
+	string name;
+	int age;
+public:
+	void SetName(string na){
+		name=na;
+	}
+	void SetAge(int val){
+		age=val;
+	}
+};
+class Student :protected Human
+{
+public:
+	int id;
+	void SetId(int val){
+		id=val;
+		cout<<id<<endl;
+	}
+	void SetData(string n, int ag, int va){  // public method cause members in parent class became protected when they entered child class 
+		name=n;
+		age=ag;
+		id=va;
+	}
+	void Display(){
+		cout<<name<<" "<<age<<" "<<id<<endl;
+	}
+};
+int main(){
+	Student s1;
+	s1.SetData("srinu",32,667);
+	s1.Display();
+}
+// To access protected members from a derived class we write a public method
+// here we have inherited SetName,SetAge from parent class called Human but they became protected as we inhertied protectedly
