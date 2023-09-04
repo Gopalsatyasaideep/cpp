@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Vechicle
+{
+public:
+	string type_of_veh;
+};
+class Cars
+{
+public:
+	string company,colour,model;
+	int price;
+	string manfacturing_place;
+};
+class Mustang : protected Cars, public Vechicle{
+public:
+	using Cars::colour;
+	using Cars::price;
+	using Cars::model;
+	using Cars:: manfacturing_place;
+	void MusInfo(string col, string mod, int cost, string type){
+		colour=col;
+		model=mod;
+		price=cost;
+		type_of_veh=type;
+	}
+	void Musdis();
+};
+void Mustang::Musdis(){
+	cout<<colour<<"|"<<model<<"|"<<price<<"|"<<type_of_veh<<endl;
+}
+int main(){
+		Mustang old;
+		old.MusInfo("Black","Shelby GT 350",1200000,"Four-wheeler");
+		old.Musdis();
+	}
