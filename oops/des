@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+class HumanBeing{
+private:
+	string *name;
+	int *age;
+public:
+		HumanBeing(string word,int val){
+			name=new string;
+			age=new int;
+			*name=word;
+			*age=val;
+		}
+		void dis()
+		{
+			cout<<*name<<" "<<*age<<endl;
+		}
+		~HumanBeing(){ // destructor 
+			delete name;
+			delete age;
+			cout<<"Destructor"<<end;
+		}
+};
+int main(){
+	HumanBeing *human1=new HumanBeing("Sunil",23);
+	human1->dis();
+	delete human1;
+}
