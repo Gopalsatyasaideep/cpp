@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+class  Complex
+{
+private:
+    int x,y;
+public:
+	Complex(int i=0, int j=0)
+	{
+		x=i;
+		y=j;
+	}
+	void print(){
+		cout<<x<<"+"<<y<<"i"<<endl;
+	}
+	Complex operator +(Complex &c1){
+		Complex tmp;
+		tmp.x=c1.x + x;
+		tmp.y=c1.y + y;
+		return tmp;
+	}
+};
+int main(){
+	Complex c1(2,4);
+	c1.print();
+	Complex c2(7,6);
+	c2.print();
+	Complex c3;
+	c3=c2+c1;
+	c3.print();
+}
+// Operator overloading 
+
